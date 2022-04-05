@@ -1,0 +1,62 @@
+@import "../../scss/_variables.scss";
+
+.heart {
+  display: flex;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  transform: rotate(45deg);
+  transform-origin: 32px 32px;
+
+  div {
+    top: 23px;
+    left: 19px;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: $heartColor;
+    animation: heart-beat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    &::before {
+      left: -17px;
+      border-radius: 50% 0 0 50%;
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      background: $heartColor;
+      box-sizing: border-box;
+    }
+    &::after {
+      top: -17px;
+      border-radius: 50% 50% 0 0;
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      background: $heartColor;
+    }
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(1.1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
