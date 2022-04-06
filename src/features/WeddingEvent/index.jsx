@@ -125,7 +125,7 @@ export default function WeddingEvent() {
                     }}
                   />
                 </ListItemIcon>
-                <Typography variant="subtitle2">10h30 26/04/2022</Typography>
+                <Typography variant="subtitle2">11h 26/04/2022</Typography>
               </MenuItem>
             </CardContent>
             <CardActions sx={{ display: "flex", justifyContent: "center" }}>

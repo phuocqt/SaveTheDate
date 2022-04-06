@@ -118,7 +118,7 @@ const images = [
   },
 ];
 
-export default function OpenIMG() {
+export default function Album() {
   const [open, setOpen] = React.useState(false);
   const [ar, setAr] = React.useState([]);
   const handleClickOpen = () => {
@@ -168,13 +168,19 @@ export default function OpenIMG() {
 
         <Box>
           <Dialog
+            sx={{ position: "relative" }}
             open={open}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
             fullScreen
           >
-            <Close onClick={handleClose}></Close>
+            <Close
+              color="primary"
+              onClick={handleClose}
+              fontSize="large"
+              className="diaglog-close"
+            ></Close>
             <AlbumSlide images={ar} />
           </Dialog>
         </Box>
