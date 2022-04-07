@@ -9,6 +9,7 @@ import * as yup from "yup";
 
 import "./GuestBook.scss";
 import { useSnackbar } from "notistack";
+import axios from "axios";
 
 const schema = yup.object().shape({
   name: yup.string().required("Vui lòng nhập tên"),
@@ -29,7 +30,14 @@ function GuestBook(props) {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   const handleSubmit = (values) => {
-    console.log(values);
+    axios
+      .post(
+        "https://sheet.best/api/sheets/0cb77266-8280-47b4-9a32-b8620de26efe",
+        values
+      )
+      .then((response) => {
+        console.log(response);
+      });
     form.reset();
     enqueueSnackbar("cảm ơn bạn đã gửi lời chúc", {
       variant: "success",
@@ -37,7 +45,7 @@ function GuestBook(props) {
   };
 
   return (
-    <div className="GuestBook">
+    <div className="GuestBook" id="guestBook">
       <Box className="GuestBook-container">
         <Typography variant="h5" className="GuestBook-title">
           Wishes from friends
@@ -55,7 +63,7 @@ function GuestBook(props) {
             form={form}
             rows={4}
           ></InputField>
-          <Button type="submit" variant="outlined" color="secondary" center>
+          <Button type="submit" variant="outlined" color="secondary">
             GỬI LỜI CHÚC
           </Button>
         </form>

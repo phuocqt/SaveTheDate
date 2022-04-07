@@ -1,5 +1,4 @@
 import { Close } from "@mui/icons-material";
-import React from "react";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ListItem } from "@mui/material";
@@ -17,9 +16,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Slide from "@mui/material/Slide";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
+import React from "react";
+import Link from "react-scroll/modules/components/Link";
 import tnp from "../../images/tnp.png";
 import "../Donate/donate.scss";
+import "./Navbar.scss";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -47,10 +48,11 @@ const Navbar = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <AppBar
       position="static"
-      className="app_bar"
+      className="navbar "
       sx={{ bgcolor: "white", display: "flex" }}
     >
       <Container maxWidth="xl">
@@ -65,7 +67,7 @@ const Navbar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "none", md: "none" },
               justifyContent: "center",
             }}
           >
@@ -76,7 +78,7 @@ const Navbar = () => {
               sx={{
                 flexGrow: 1,
                 display: {
-                  xs: "flex",
+                  xs: "none",
                   md: "none",
                   color: "black",
                   justifyContent: "center",
@@ -115,7 +117,7 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "none", md: "none" },
               }}
             >
               <MenuItem
@@ -123,30 +125,17 @@ const Navbar = () => {
 
                 onClick={handleCloseNavMenu}
               >
-                <Button
-                  variant="text"
-                  textAlign="center"
-                  sx={{ color: "black" }}
-                >
+                <Button variant="text" sx={{ color: "black" }}>
                   SỰ KIỆN
                 </Button>
-                <Button
-                  variant="text"
-                  textAlign="center"
-                  sx={{ color: "black" }}
-                >
+                <Button variant="text" sx={{ color: "black" }}>
                   ALBUM CƯỚI
                 </Button>
-                <Button
-                  variant="text"
-                  textAlign="center"
-                  sx={{ color: "black" }}
-                >
+                <Button variant="text" sx={{ color: "black" }}>
                   LỜI CHÚC
                 </Button>
                 <Button
                   variant="text"
-                  textAlign="center"
                   sx={{ color: "black" }}
                   onClick={handleClickOpen}
                 >
@@ -159,36 +148,27 @@ const Navbar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "flex", md: "flex" },
               justifyContent: "center",
             }}
           >
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black", display: "block" }}
-            >
-              SỰ KIỆN
+            <Button sx={{ my: 2, color: "black", display: "block" }}>
+              <Link to="event" smooth={true} duration={1000}>
+                SỰ KIỆN
+              </Link>
             </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black", display: "block" }}
-            >
-              ALBUM CƯỚI
+            <Button sx={{ my: 2, color: "black", display: "block" }}>
+              <Link to="gallery" smooth={true} duration={1000}>
+                ALBUM CƯỚI
+              </Link>
             </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black", display: "block" }}
-            >
-              LỜI CHÚC
+            <Button sx={{ my: 2, color: "black", display: "block" }}>
+              <Link to="guestBook" smooth={true} duration={1000}>
+                LỜI CHÚC
+              </Link>
             </Button>
+
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black", display: "block" }}
-            >
-              MỪNG CƯỚI
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "black", display: "block" }}
               onClick={handleClickOpen}
             >

@@ -13,7 +13,7 @@ import "./event.scss";
 
 export default function WeddingEvent() {
   return (
-    <div className="event_wrapper">
+    <div className="event_wrapper" id="event">
       <Typography className="event-title">Sự Kiện Cưới</Typography>
       <Box
         display="flex"
@@ -30,9 +30,7 @@ export default function WeddingEvent() {
               image="https://cdn.biihappy.com/ziiweb/website/61990349db8f76231c132068/45dfd859dd184042e2a6adaa320ac64b.jpeg"
             />
             <CardContent>
-              <Typography variant="h6" bolt>
-                TIỆC CƯỚI NHÀ NỮ
-              </Typography>
+              <Typography variant="h6">TIỆC CƯỚI NHÀ NỮ</Typography>
 
               <MenuItem sx={{ pl: 0 }}>
                 <ListItemIcon
@@ -75,7 +73,6 @@ export default function WeddingEvent() {
               <Button
                 variant="outlined"
                 href="https://goo.gl/maps/igW9qeEaTrC5PMRu7"
-                center
               >
                 Xem Bản Đồ
               </Button>
@@ -109,9 +106,10 @@ export default function WeddingEvent() {
                   />
                 </ListItemIcon>
                 <Typography variant="subtitle2">
-                  Thôn Trằm,Hướng Tân,
+                  Nhà hàng tiệc cưới Quốc Khiển
                 </Typography>
               </MenuItem>
+              <Typography variant="subtitle2">Thôn Trằm,Hướng Tân,</Typography>
               <Typography variant="subtitle2">Hướng Hóa,Quảng Trị</Typography>
               <MenuItem
                 sx={{ display: "flex", justifyContent: "center", pl: 0 }}
@@ -131,8 +129,7 @@ export default function WeddingEvent() {
             <CardActions sx={{ display: "flex", justifyContent: "center" }}>
               <Button
                 variant="outlined"
-                href="https://goo.gl/maps/k8jU49LB6kFBCWWX9"
-                center
+                href="https://goo.gl/maps/qKvjxnH6HUMSG4eeA"
               >
                 Xem Bản Đồ
               </Button>

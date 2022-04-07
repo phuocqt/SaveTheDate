@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
     "node-sass": "^7.0.1",
     "notistack": "^2.0.3",
     "radium": "^0.26.2",
@@ -20,6 +21,7 @@
     "react-hook-form": "^7.29.0",
     "react-photo-masonry": "^8.0.0",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.6",
     "swiper": "^8.0.7",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"

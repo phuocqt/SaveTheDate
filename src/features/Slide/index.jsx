@@ -15,7 +15,7 @@ import "./slide.scss";
 
 export default function Slide() {
   return (
-    <>
+    <div id="slide">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -60,6 +60,6 @@ export default function Slide() {
           </Box>
         </Box>
       </Swiper>
-    </>
+    </div>
   );
 }
