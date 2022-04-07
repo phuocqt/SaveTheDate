@@ -130,7 +130,7 @@ export default function Album() {
   };
   let newImages = [];
   return (
-    <div className="gallery_wrapper">
+    <div className="gallery_wrapper" id="gallery">
       <Typography className="gallery-title">Album Hình Cưới</Typography>
       <Box className="gallery grid wide  ">
         <div
