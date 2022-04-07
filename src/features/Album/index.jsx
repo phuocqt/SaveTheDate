@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import * as React from "react";
 import Gallery from "react-photo-masonry";
 import AlbumSlide from "./AlbumSlide";
-import "./grid.css";
+import "./grid.scss";
 import "./styles.scss";
 
 const images = [
