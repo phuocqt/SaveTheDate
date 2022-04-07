@@ -12,7 +12,7 @@ import "./styles.scss";
 
 const images = [
   {
-    src: "https://live.staticflickr.com/65535/51973342619_71d8f6140b_c.jpg",
+    src: "https://live.staticflickr.com/65535/51973342619_8617ac3e99_k.jpg",
     width: "200px",
     height: "300px",
   },
